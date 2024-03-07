@@ -1,0 +1,146 @@
+object fMain: TfMain
+  Left = 300
+  Height = 68
+  Top = 145
+  Width = 141
+  BorderStyle = bsNone
+  Caption = 'fMain'
+  ClientHeight = 68
+  ClientWidth = 141
+  Color = clSilver
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  FormStyle = fsStayOnTop
+  Icon.Data = {
+    FE0200000000010001002020100000000000E802000016000000280000002000
+    0000400000000100040000000000800200000000000000000000000000000000
+    0000000000000000800000800000008080008000000080008000808000008080
+    8000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+    FF00999999999999999999999999999999999FFFFFFFFFFFFF88888888888FFF
+    FFF997FFFFFFFFFF888888888888888FFFF9977FFFFFFFF8444C444888888888
+    FFF99777FFFFFF4444444444488888888FF997777FFF44444C4C4C4C4C488888
+    88F9977777F44444443444444444888888F99777774C444C433C4C4C4C4C4888
+    8889977774444444C334C444C444C48888899777744C4C4C433C4C4C4C4C4C88
+    88899777444444C43334CCC4C4C4C44888899777444C4C43333C4C4C4C4C4C38
+    888997744444C4433333CCCCC4CCC433888997744C4C4C4333333C4C4C4C4C33
+    888997744444C43333333CCCCCCCC43388899774444C4C333333CC4CCC4C4C33
+    888997744444C433333CCCCCCCC33333888997744C4C4C334C4C4CCCCCC33333
+    8889977444444433CCCC3CCCCCC3333388F99777444C4C433C433C4CCC4C3338
+    88F997774444343333333CCCCCCCC4C88FF99777744C333333333C4C4C433C88
+    FFF997777444333333333CCCCCC3348FFFF99777774C333333333C4C3C433FFF
+    FFF997777774333333C333CC3433FFFFFFF9977777774333334C333C4C377FFF
+    FFF9977777777744433444C4477777FFFFF99777777777774C4C4C477777777F
+    FFF99777777777777777777777777777FFF99777777777777777777777777777
+    7FF9977777777777777777777777777777F99999999999999999999999999999
+    9999000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  LCLVersion = '3.2.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 68
+    Top = 0
+    Width = 141
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 68
+    ClientWidth = 141
+    Color = clSilver
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 8
+      Height = 13
+      Top = 32
+      Width = 123
+      Caption = '2010-11-18 10:41:00 (US)'
+      Color = clBlack
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      PopupMenu = PopupMenu1
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 13
+      Top = 48
+      Width = 124
+      Caption = '2010-11-18 10:41:00 (RO)'
+      Color = clBlack
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      PopupMenu = PopupMenu1
+    end
+    object Panel2: TPanel
+      Left = 4
+      Height = 25
+      Top = 4
+      Width = 133
+      Alignment = taLeftJustify
+      BevelOuter = bvNone
+      Caption = 'Ontop Multi Clock'
+      ClientHeight = 25
+      ClientWidth = 133
+      Color = clNavy
+      Font.Color = clWhite
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      OnMouseDown = Panel1MouseDown
+      object SpeedButton1: TSpeedButton
+        Left = 113
+        Height = 17
+        Top = 4
+        Width = 17
+        Caption = 'x'
+        Flat = True
+        Font.Color = clWhite
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        OnClick = Close1Click
+        ParentFont = False
+      end
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 64
+    Top = 32
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 32
+    Top = 32
+    object Alwaysontop1: TMenuItem
+      Caption = 'Always on&top'
+      Checked = True
+      OnClick = Alwaysontop1Click
+    end
+    object HidefromTaskbar1: TMenuItem
+      Caption = 'Hide from &Taskbar'
+      OnClick = HidefromTaskbar1Click
+    end
+    object N1: TMenuItem
+      Caption = '-'
+    end
+    object Close1: TMenuItem
+      Caption = '&Close'
+      OnClick = Close1Click
+    end
+  end
+end
